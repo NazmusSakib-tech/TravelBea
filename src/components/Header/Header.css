@@ -1,0 +1,29 @@
+.on-select{
+    background-color:slateblue;
+    border-radius: 5px;
+    color: #fff !important;
+}
+/* .mouse-hover:hover{
+    background-color:rgb(138, 130, 190);
+    border-radius: 5px;
+    color: #fff !important;
+    opacity: 0.8;
+} */
+.user-name-text{
+    color: rgb(62, 173, 62);
+    font-weight: 800;
+}
+
+
+
+@media only screen and (max-width: 767px){
+    .nav-brand img{
+        /* width: 50%; */
+        height: 100px;
+        margin-right: 50px;
+}
+
+    .logout-btn{
+        margin-top:5px;
+    }
+}
