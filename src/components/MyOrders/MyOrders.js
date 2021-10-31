@@ -12,7 +12,7 @@ const MyOrders = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/myOrders')
+        fetch('https://chilling-scarecrow-03735.herokuapp.com/myOrders')
             .then(res => res.json())
             .then(result => {
                 setmyOrders(result);

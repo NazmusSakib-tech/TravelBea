@@ -20,7 +20,7 @@ const ServiceDetails = () => {
         data.service_shortdescribe = service?.shortdescribe;
         data.status = "Pending";
 
-        fetch(`http://localhost:5000/booking`, {
+        fetch(`https://chilling-scarecrow-03735.herokuapp.com/booking`, {
             method: 'POST',
             headers: { 'content-type': "application/json" },
             body: JSON.stringify(data)
@@ -36,7 +36,7 @@ const ServiceDetails = () => {
     };
 
     useEffect(() => {
-        const url = `http://localhost:5000/serviceDetails/${serviceID}`;
+        const url = `https://chilling-scarecrow-03735.herokuapp.com/serviceDetails/${serviceID}`;
         fetch(url)
             .then(res => res.json())
             .then(result => setService(result))

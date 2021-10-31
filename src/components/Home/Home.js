@@ -14,7 +14,7 @@ const Home = () => {
     const [services, setServices] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://chilling-scarecrow-03735.herokuapp.com/services')
             .then(res => res.json())
             .then(result => setServices(result))
     }, [])
@@ -123,7 +123,7 @@ const Home = () => {
                                             {service.shortdescribe.slice(0,100)}
                                         </Card.Text>
                                         <Card.Text>
-                                            <h4><span className="text-primary">Package Price:</span> <span className="text-warning">${service.price}</span> </h4>
+                                            <h4><span className="text-primary">Package Price:</span> <span className="text-warning fw-bold">${service.price}</span> </h4>
                                         </Card.Text>
 
                                         {/* <NavLink to={`/serviceDetails/${service._id}`}>
@@ -262,19 +262,6 @@ const Home = () => {
             </div>
 
             {/* Bg Images End */}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

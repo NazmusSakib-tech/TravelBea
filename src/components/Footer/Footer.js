@@ -65,16 +65,16 @@ const Footer = () => {
                                     Products
                                 </h6>
                                 <p>
-                                    <a href="#!" class="text-reset">Angular</a>
+                                    <a href="#!" class="text-reset">Holiday Package</a>
                                 </p>
                                 <p>
-                                    <a href="#!" class="text-reset">React</a>
+                                    <a href="#!" class="text-reset">Tickets</a>
                                 </p>
                                 <p>
-                                    <a href="#!" class="text-reset">Vue</a>
+                                    <a href="#!" class="text-reset">Flight</a>
                                 </p>
                                 <p>
-                                    <a href="#!" class="text-reset">Laravel</a>
+                                    <a href="#!" class="text-reset">Schedule</a>
                                 </p>
                             </div>
                             {/* <!-- Grid column --> */}
@@ -124,7 +124,7 @@ const Footer = () => {
                 {/* <!-- Copyright --> */}
                 <div class="text-center p-4" style={{backgroundColor: "blue"}}>
                     © 2021 Copyright:
-                    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                    <a class="text-reset fw-bold" href="">TravelBea</a>
                 </div>
                 {/* <!-- Copyright --> */}
             </footer>

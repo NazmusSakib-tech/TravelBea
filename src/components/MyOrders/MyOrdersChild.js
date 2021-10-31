@@ -12,7 +12,7 @@ const MyOrdersChild = (props) => {
 
         if (window.confirm("Are You Sure")) {
 
-            const url = `http://localhost:5000/deleteOrder/${id}`
+            const url = `https://chilling-scarecrow-03735.herokuapp.com/deleteOrder/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
