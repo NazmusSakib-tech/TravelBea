@@ -18,6 +18,7 @@ const ServiceDetails = () => {
         data.service_name = service?.name;
         data.service_image = service?.image;
         data.service_shortdescribe = service?.shortdescribe;
+        data.price = service?.price;
         data.status = "Pending";
 
         fetch(`https://chilling-scarecrow-03735.herokuapp.com/booking`, {

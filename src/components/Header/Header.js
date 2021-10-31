@@ -34,7 +34,7 @@ const Header = () => {
                         {user?.email?<Nav.Link  activeClassName="on-select" className="text-dark fw-bold mouse-hover ms-2" as={NavLink} to="/addNewPackage">Add New Package</Nav.Link>: ""}
                         {user?.email?<Nav.Link  activeClassName="on-select" className="text-dark fw-bold mouse-hover ms-2" as={NavLink} to="/manageAllOrders">Manage All Orders</Nav.Link>: ""}
 
-                      <Nav.Link activeClassName="on-select" className="text-dark fw-bold mouse-hover ms-2 w-sm-50" as={NavLink} to="/login">Login</Nav.Link>
+                      {user?.email? "":<Nav.Link activeClassName="on-select" className="text-dark fw-bold mouse-hover ms-2 w-sm-50" as={NavLink} to="/login">Login</Nav.Link>}
                         {user?.email? <Navbar.Text className="ms-2 text-primary">
                             Signed in as: <span className="user-name-text fw-bold">{user?.displayName ? user?.displayName: "" }</span>
                         </Navbar.Text> : ""}

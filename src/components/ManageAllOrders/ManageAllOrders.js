@@ -14,7 +14,7 @@ const ManageAllOrders = () => {
 
                 setAllOrders(result);
                 setCurrentStatus(true);
-                console.log(result);
+                
             })
     }, [currentStatus])
 
@@ -32,6 +32,7 @@ const ManageAllOrders = () => {
                     if (result.deletedCount) {
                         alert("Your Order Deleted")
                         // allOrders[index].status="Approved";
+                        setCurrentStatus(false);
                     }
                 })
         }

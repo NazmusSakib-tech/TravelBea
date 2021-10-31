@@ -2,6 +2,9 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import "./Login.css"
+import logo1 from '../../utilities/images/logo/logo1.jpg'
+
 
 
 const Login = () => {
@@ -12,13 +15,16 @@ const Login = () => {
     const handleGoogleSignIN = () => {
         console.log("btn Click from accounts");
         googleSignInMethod()
-        .then(() => {
-            history.push(redirect_uri);
-        })
+            .then(() => {
+                history.push(redirect_uri);
+            })
     }
     return (
-        <div>
-            <Button onClick={handleGoogleSignIN} className="btn btn-primary">Google Sign In</Button>
+        <div className="d-flex justify-content-center align-items-center p-3 bg-dark">
+            <div className="login-button d-flex justify-content-center align-items-center flex-column">
+                <img src={logo1} width="150px" alt="" className="mb-2" />
+                <Button onClick={handleGoogleSignIN} className="btn btn-primary">Google Sign In</Button>
+            </div>
         </div>
     );
 };
