@@ -17,3 +17,6 @@ This project was bootstrapped with [Create React App](https://travelbea-11869.we
 * CSS
 * JavaScript
 * Bootstrap 
+* Bootstrap 
+* MongoDb
+* Heroku

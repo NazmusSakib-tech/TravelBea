@@ -73,7 +73,8 @@ const ServiceDetails = () => {
                     <div className="col-md-6">
                         <h2 style={{textDecoration: "underline"}} className="text-uppercase text-warning" >Please Fill-up The Form</h2>
                         <form className="form-custom" onSubmit={handleSubmit(onSubmit)}>
-                            <input className="mt-2" {...register("name")} placeholder="Name" required /> <br />
+                            <input className="mt-2" {...register("name")} placeholder="Name" defaultValue={user?.displayName} required /> <br />
+                            <input className="mt-2" {...register("email")} placeholder="Name" defaultValue={user?.email} required /> <br />
                             <input className="mt-2" type="number" {...register("number")} placeholder="Mobile" required /> <br />
                             <input className="mt-2" type="text" {...register("address")} placeholder="Address" required /> <br />
                             <input className="bg-warning fw-bold border mt-2" type="submit" value="Checkout Booking" />

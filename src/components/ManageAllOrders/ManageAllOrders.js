@@ -57,21 +57,21 @@ const ManageAllOrders = () => {
     return (
         <div className="manage-all-orders p-3">
             <h2 className="p-3 fw-bold text-primary"> <u>Manage All Orders</u></h2>
-            <div class=" mb-3 container" style={{ maxWidth: "800px" }}>
+            <div className=" mb-3 container" style={{ maxWidth: "800px" }}>
                 <div >
 
                     {
                         allOrders.map((orders, index) => (
-                            <div class="row g-0 m-3 border border-primary p-3 rounded">
-                                <div class="col-md-4">
-                                    <img src={orders?.service_image} class="img-fluid rounded-start" alt="..." />
+                            <div className="row g-0 m-3 border border-primary p-3 rounded">
+                                <div className="col-md-4">
+                                    <img src={orders?.service_image} className="img-fluid rounded-start" alt="..." />
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{orders?.service_name}</h5>
-                                        <p class="card-text">{orders?.service_shortdescribe}</p>
-                                        {orders.status === "Pending" ? <h5 class="card-text"><small class="text-danger fw-bold">{orders?.status}</small></h5> :
-                                            <h5 class="card-text"><small class="text-success fw-bold">{orders?.status}</small></h5>
+                                <div className="col-md-8">
+                                    <div className="card-body">
+                                        <h5 className="card-title">{orders?.service_name}</h5>
+                                        <p className="card-text">{orders?.service_shortdescribe}</p>
+                                        {orders.status === "Pending" ? <h5 className="card-text"><small className="text-danger fw-bold">{orders?.status}</small></h5> :
+                                            <h5 className="card-text"><small className="text-success fw-bold">{orders?.status}</small></h5>
                                         }
                                         <h6 className="text-success">E-mail: {orders?.email}</h6>
                                         <div>

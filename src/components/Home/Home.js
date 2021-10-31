@@ -26,13 +26,13 @@ const Home = () => {
             {/* slider start */}
 
 
-            <div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">
-                <div class="carousel-indicators">
+            <div id="carouselExampleCaptions" className="carousel slide" data-mdb-ride="carousel">
+                <div className="carousel-indicators">
                     <button
                         type="button"
                         data-mdb-target="#carouselExampleCaptions"
                         data-mdb-slide-to="0"
-                        class="active"
+                        className="active"
                         aria-current="true"
                         aria-label="Slide 1"
                     ></button>
@@ -49,58 +49,58 @@ const Home = () => {
                         aria-label="Slide 3"
                     ></button>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
                         <img
                             src={sld4}
-                            class="d-block w-100"
+                            className="d-block w-100"
                             alt="..."
                         />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                             <h2>Nature Your Love</h2>
                             <p>The mountains are calling and I must go</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div className="carousel-item">
                         <img
                             src={sld2}
-                            class="d-block w-100"
+                            className="d-block w-100"
                             alt="..."
                         />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                             <h2>Welcome Beach Lovers</h2>
                             <p>Only at the beach can we go a splishin’ and a splashin</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div className="carousel-item">
                         <img
                             src={sld3}
-                            class="d-block w-100"
+                            className="d-block w-100"
                             alt="..."
                         />
-                        <div class="carousel-caption d-none d-md-block">
+                        <div className="carousel-caption d-none d-md-block">
                             <h2>A Journey That You Enjoy</h2>
                             <p>Do not follow where the path may lead. Go instead where there is no path and leave a trail</p>
                         </div>
                     </div>
                 </div>
                 <button
-                    class="carousel-control-prev"
+                    className="carousel-control-prev"
                     type="button"
                     data-mdb-target="#carouselExampleCaptions"
                     data-mdb-slide="prev"
                 >
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
                 </button>
                 <button
-                    class="carousel-control-next"
+                    className="carousel-control-next"
                     type="button"
                     data-mdb-target="#carouselExampleCaptions"
                     data-mdb-slide="next"
                 >
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
                 </button>
             </div>
 
@@ -114,7 +114,7 @@ const Home = () => {
                 <Row xs={1} md={4} className="g-4">
                     {
                         services?.map(service =>
-                            <CardGroup className="">
+                            <CardGroup key={service._id} className="">
                                 <Card className="bg-image hover-zoom">
                                     <Card.Img variant="top" src={service.image} />
                                     <Card.Body>
@@ -155,11 +155,11 @@ const Home = () => {
                     </Fade>
                     <Fade right>
                         <div className="col-md-6">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
+                            <div className="accordion" id="accordionExample">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingOne">
                                         <button
-                                            class="accordion-button"
+                                            className="accordion-button"
                                             type="button"
                                             data-mdb-toggle="collapse"
                                             data-mdb-target="#collapseOne"
@@ -171,11 +171,11 @@ const Home = () => {
                                     </h2>
                                     <div
                                         id="collapseOne"
-                                        class="accordion-collapse collapse show"
+                                        className="accordion-collapse collapse show"
                                         aria-labelledby="headingOne"
                                         data-mdb-parent="#accordionExample"
                                     >
-                                        <div class="accordion-body text-start">
+                                        <div className="accordion-body text-start">
                                             <strong>Yes, people who have recovered</strong>  from COVID-19 can safely travel if they tested positive for COVID-19 in the past 90 days and have met criteria to end isolation.
 
                                             People can continue to test positive for up to 90 days after a COVID-19 diagnosis without being infectious to others. For this reason, travelers who have recovered from COVID-19 in the past 90 days do not need to get tested before or after travel. If they develop COVID-19 symptoms after travel, they should isolate and consult with a healthcare provider for testing recommendations.
@@ -186,10 +186,10 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingTwo">
                                         <button
-                                            class="accordion-button collapsed"
+                                            className="accordion-button collapsed"
                                             type="button"
                                             data-mdb-toggle="collapse"
                                             data-mdb-target="#collapseTwo"
@@ -201,11 +201,11 @@ const Home = () => {
                                     </h2>
                                     <div
                                         id="collapseTwo"
-                                        class="accordion-collapse collapse"
+                                        className="accordion-collapse collapse"
                                         aria-labelledby="headingTwo"
                                         data-mdb-parent="#accordionExample"
                                     >
-                                        <div class="accordion-body text-start">
+                                        <div className="accordion-body text-start">
                                             <strong>Maintaining physical distance</strong> to prevent COVID-19 is often difficult on public transportation. People may not be able to keep a distance of 6 feet from others on airplanes, trains, or buses.
 
                                             Protect yourself from COVID-19 by getting fully vaccinated and by wearing a mask on public transportation. Wearing a mask over your nose and mouth is required on in indoor areas of planes, buses, trains, and other forms of public transportation traveling into, within, or out of the United States, and while indoors at U.S. transportation hubs (such as airports and stations), even for those people who have been fully vaccinated.
@@ -214,10 +214,10 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingThree">
                                         <button
-                                            class="accordion-button collapsed"
+                                            className="accordion-button collapsed"
                                             type="button"
                                             data-mdb-toggle="collapse"
                                             data-mdb-target="#collapseThree"
@@ -229,11 +229,11 @@ const Home = () => {
                                     </h2>
                                     <div
                                         id="collapseThree"
-                                        class="accordion-collapse collapse"
+                                        className="accordion-collapse collapse"
                                         aria-labelledby="headingThree"
                                         data-mdb-parent="#accordionExample"
                                     >
-                                        <div class="accordion-body">
+                                        <div className="accordion-body">
                                             Maintaining physical distance to prevent COVID-19 is often difficult on public transportation. People may not be able to keep a distance of 6 feet from others on airplanes, trains, or buses.
 
                                             Protect yourself from COVID-19 by getting fully vaccinated and by wearing a mask on public transportation. Wearing a mask over your nose and mouth is required on in indoor areas of planes, buses, trains, and other forms of public transportation traveling into, within, or out of the United States, and while indoors at U.S. transportation hubs (such as airports and stations), even for those people who have been fully vaccinated.
