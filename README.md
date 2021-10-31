@@ -1,6 +1,6 @@
 # TravelBea
 
-This project was bootstrapped with [Create React App](https://travelbea-11869.web.appcreate-react-app).
+This project was bootstrapped with [Project Link](https://travelbea-11869.web.appcreate-react-app).
 
 ## Available Scripts
 
