@@ -1,0 +1,17 @@
+.service-details{
+    background-image:url('https://images.unsplash.com/photo-1541855951501-fc42a85d86d3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMGdyZWVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    -webkit-background-size:cover;
+    min-height: 500px;
+    background-attachment: fixed;
+}
+
+
+
+.form-custom input{
+    height: 50px;
+    width: 300px;
+    text-align: center;
+}

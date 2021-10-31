@@ -1,0 +1,18 @@
+.manage-all-orders{
+    /* background-image:url('https://images.unsplash.com/photo-1473625247510-8ceb1760943f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1111&q=80'); */
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    -webkit-background-size:cover;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-color: rgba(27, 25, 25, 0.842);
+    color: white;
+    
+}
+
+.manage-all-orders h2{
+    font-family: cursive;
+}
+
+/* rgb(238, 234, 14); */

@@ -1,30 +1,43 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Button, Row, Spinner } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import MyOrdersChild from './MyOrdersChild';
+import "./MyOrders.css"
+import Fade from 'react-reveal/Fade';
+
 
 const MyOrders = () => {
     const [myOrders, setmyOrders] = useState([]);
     const { user } = useAuth();
 
     useEffect(() => {
+
         fetch('http://localhost:5000/myOrders')
             .then(res => res.json())
-            .then(result => (
-                setmyOrders(result)
-            ))
-    }, [myOrders])
+            .then(result => {
+                setmyOrders(result);
 
-    // console.log(myOrders);
+                console.log(result);
+            })
+    }, [])
+
+
+
     return (
-        <div className="container">
-            <h2>My Orders</h2>
-            <Row xs={1} md={4} className="p-3">
-                {
-                    myOrders?.filter(item => item?.email === user?.email).map(item => <MyOrdersChild key={item?._id} item={item}></MyOrdersChild>)
-                }
-            </Row>
+        <div className="my-orders">
+            <div className="container">
+                <Fade left>
+                    <h2 className=" display-6"> <u>My Orders</u> </h2>
+                </Fade>
+                <Fade right>
+                    <Row xs={1} md={4} className="p-3">
+                        {
+                            myOrders?.filter(item => item?.email === user?.email).map(item => <MyOrdersChild key={item?._id} item={item}></MyOrdersChild>)
+                        }
+                    </Row>
+                </Fade>
 
+            </div>
         </div>
     );
 };

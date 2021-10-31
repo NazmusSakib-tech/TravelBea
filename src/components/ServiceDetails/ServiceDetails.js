@@ -4,6 +4,9 @@ import { useParams } from 'react-router';
 import { NavLink } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import useAuth from '../../hooks/useAuth'
+import "./ServiceDetails.css";
+
+
 const ServiceDetails = () => {
     const { serviceID } = useParams();
     const [service, setService] = useState({})
@@ -41,50 +44,47 @@ const ServiceDetails = () => {
 
 
     return (
-        <>
-            <h2>Service Details Page{serviceID}</h2>
+        <div className="service-details">
 
             {/* <Row xs={1} md={4} className="g-4"> */}
 
-            <div className="row">
-                <div className="col-md-4">
-                    <CardGroup>
-                        <Card>
-                            <Card.Img variant="top" src={service?.image} />
-                            <Card.Body>
-                                <Card.Title>{service?.name}</Card.Title>
-                                <Card.Text>
-                                    {service?.shortdescribe}
-                                </Card.Text>
-                                <Card.Text>
-                                    {service?.price}
-                                </Card.Text>
-
-                                <NavLink to={`/updateProduct/${service?._id}`}>
-                                    <Button>Update</Button>
-                                </NavLink>
-                                <Button className="btn btn-danger m-2">Delete</Button>
-                            </Card.Body>
-                            <Card.Footer>
-                                <small className="text-muted">Last updated 3 mins ago</small>
-                            </Card.Footer>
-                        </Card>
-                    </CardGroup>
-                </div>
-                <div className="col-md-8">
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <input {...register("name")} placeholder="name" /> <br />
-                        <input type="number" {...register("number")} placeholder="mobile number" /> <br />
-                        <input type="text" {...register("address")} placeholder="address" /> <br />
-                        <input type="submit" />
-                    </form>
+            <div className="container py-5">
+                <div className="row mx-auto d-flex justify-content-center align-items-center">
+                    <div className="col-md-6">
+                        <CardGroup>
+                            <Card>
+                                <Card.Img variant="top" src={service?.image} />
+                                <Card.Body>
+                                    <Card.Title>{service?.name}</Card.Title>
+                                    <Card.Text>
+                                        {service?.fulldescribtion}
+                                    </Card.Text>
+                                    <Card.Text>
+                                        <h4>Package Price: ${service?.price}</h4>
+                                    </Card.Text>  
+                                </Card.Body>
+                                <Card.Footer>
+                                    <small className="text-muted">Last updated 3 mins ago</small>
+                                </Card.Footer>
+                            </Card>
+                        </CardGroup>
+                    </div>
+                    <div className="col-md-6">
+                        <h2 style={{textDecoration: "underline"}} className="text-uppercase text-warning" >Please Fill-up The Form</h2>
+                        <form className="form-custom" onSubmit={handleSubmit(onSubmit)}>
+                            <input className="mt-2" {...register("name")} placeholder="Name" required /> <br />
+                            <input className="mt-2" type="number" {...register("number")} placeholder="Mobile" required /> <br />
+                            <input className="mt-2" type="text" {...register("address")} placeholder="Address" required /> <br />
+                            <input className="bg-warning fw-bold border mt-2" type="submit" value="Checkout Booking" />
+                        </form>
+                    </div>
                 </div>
             </div>
 
 
             {/* </Row> */}
 
-        </>
+        </div>
     );
 };
 

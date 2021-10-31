@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import "./ManageAllOrders.css"
 
 const ManageAllOrders = () => {
 
@@ -53,8 +54,8 @@ const ManageAllOrders = () => {
 
 
     return (
-        <>
-            <h2>Manage All Orders</h2>
+        <div className="manage-all-orders p-3">
+            <h2 className="p-3 fw-bold text-primary"> <u>Manage All Orders</u></h2>
             <div class=" mb-3 container" style={{ maxWidth: "800px" }}>
                 <div >
 
@@ -68,8 +69,8 @@ const ManageAllOrders = () => {
                                     <div class="card-body">
                                         <h5 class="card-title">{orders?.service_name}</h5>
                                         <p class="card-text">{orders?.service_shortdescribe}</p>
-                                        {orders.status === "Pending" ? <h5 class="card-text"><small class="text-danger">{orders?.status}</small></h5> :
-                                            <h5 class="card-text"><small class="text-success">{orders?.status}</small></h5>
+                                        {orders.status === "Pending" ? <h5 class="card-text"><small class="text-danger fw-bold">{orders?.status}</small></h5> :
+                                            <h5 class="card-text"><small class="text-success fw-bold">{orders?.status}</small></h5>
                                         }
                                         <h6 className="text-success">E-mail: {orders?.email}</h6>
                                         <div>
@@ -88,7 +89,7 @@ const ManageAllOrders = () => {
                 </div>
             </div>
 
-        </>
+        </div>
     );
 };
 

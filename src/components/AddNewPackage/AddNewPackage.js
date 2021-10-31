@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import './AddNewPackage.css';
 
 const AddNewPackage = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -23,15 +24,15 @@ const AddNewPackage = () => {
     };
 
     return (
-        <div>
+        <div className="add-package">
             <h2>Add Package</h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name")} placeholder="name" /> <br />
-                <input type="text" {...register("shortdescribe")} placeholder="shortdescribe" /> <br />
-                <input type="text" {...register("fulldescribtion")} placeholder="fulldescribtion" /> <br />
-                <input type="text" {...register("image")} placeholder="image url" /> <br />
-                <input type="text" {...register("price")} placeholder="price" /> <br />
-                <input type="submit" />
+            <form className="form-custom p-3" onSubmit={handleSubmit(onSubmit)}>
+                <input {...register("name")} placeholder="Package Name" required /> <br />
+                <input className="mt-2" type="text" {...register("shortdescribe")} placeholder="Shortdescribe" required /> <br />
+                <input className="mt-2" type="text" {...register("fulldescribtion")} placeholder="Fulldescribtion" required /> <br />
+                <input className="mt-2" type="text" {...register("image")} placeholder="Image-Url" required /> <br />
+                <input className="mt-2" type="text" {...register("price")} placeholder="Price" required /> <br />
+                <input className="mt-2 btn btn-primary fw-bold" type="submit" value="Add Package" />
             </form>
         </div>
     );

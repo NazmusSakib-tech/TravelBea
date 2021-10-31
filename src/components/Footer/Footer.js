@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <>
             {/* <!-- Footer --> */}
-            <footer class="text-center text-lg-start bg-light ">
+            <footer class="text-center text-lg-start bg-secondary text-white ">
                 {/* <!-- Section: Social media --> */}
                 <section
                     class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
@@ -122,7 +122,7 @@ const Footer = () => {
                 {/* <!-- Section: Links  --> */}
 
                 {/* <!-- Copyright --> */}
-                <div class="text-center p-4" style={{backgroundColor: "skyblue"}}>
+                <div class="text-center p-4" style={{backgroundColor: "blue"}}>
                     © 2021 Copyright:
                     <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
                 </div>

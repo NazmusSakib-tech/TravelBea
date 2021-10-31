@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, CardGroup, Row, Button } from 'react-bootstrap';
 
 const MyOrdersChild = (props) => {
 
     const { service_name, service_image, service_shortdescribe, _id } = props.item;
+
+    
+
 
     const handleDeleteOrders = (id) => {
 
@@ -17,11 +20,16 @@ const MyOrdersChild = (props) => {
                 .then(result => {
                     if (result.deletedCount) {
                         alert("Your Order Deleted")
+                        window.location.reload(false);
+                        
                     }
                 })
         }
 
     }
+
+   
+   
 
     return (
         <>
